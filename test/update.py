@@ -12,7 +12,7 @@ if nowversion != checkver:
         newappdnpage = str(urllib.request.urlopen("https://raw.githubusercontent.com/codingPro01/PyUpdateChacker_Test/main/test/update.py").read()).replace("b'", "")
         newappdn = newappdnpage.replace("\\n", "\n")
         newappdn = newappdn[:-1]
-        newappins = open("updatecheck_1.py", "w+")
+        newappins = open(f"updatecheck_{checkver}.py", "w+")
         newappins.write(newappdn)
 if nowversion == checkver:
     print("Program up to date. ")
